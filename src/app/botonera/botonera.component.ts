@@ -24,6 +24,16 @@ export class BotoneraComponent implements OnInit {
     this.usuariobotones.email=prompt("Introduzca nombre");
  }
  borrar(){
+  this.usuariobotones.nombre="";
+  this.usuariobotones.apellidos="";
+  this.usuariobotones.notas="";
+  this.usuariobotones.telefono="";
+  this.usuariobotones.direccion="";
+  this.usuariobotones.codigo_postal="";
+  this.usuariobotones.poblacion="";
+  this.usuariobotones.provincia="";
+  this.usuariobotones.profesion="";
+  this.usuariobotones.email="";
  }
   constructor() { }
 
