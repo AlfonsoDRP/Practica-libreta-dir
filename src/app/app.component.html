@@ -1,0 +1,39 @@
+<div class="contenedor-principal">
+  <div class="contenedor-cabecera">
+    <app-cabecera></app-cabecera>
+  </div>
+  <div class="contenedor-medio">
+    <div class="division-izquierda">
+      <div class="contenedor-buscador">
+        <div class="input-group btn-sm mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Buscar..."
+            aria-label="Buscar..."
+            aria-describedby="button-addon2"
+          />
+          <button
+            class="btn btn-outline-secondary sm"
+            type="button"
+            id="button-addon2"
+          >
+            Buscar
+          </button>
+        </div>
+      </div>
+      <div class="contenedor-listado">
+        <app-listado (usuarios_salida)="seleccionausuario($event)"></app-listado>
+      </div>
+      <div class="contenedor-botonera">
+        <app-botonera class="contenedor-botonera" [usuariobotones]="usuariosele"></app-botonera>
+      </div>
+    </div>
+    <div class="contenedor-datos">
+      <app-contenido-datos class="contenedor-datos" (usuariossalida)="seleccionausuario($event)" [usuariodelpadre]="usuariosele"></app-contenido-datos>
+    </div>
+    <div class="contenedor-mapa">
+      <app-mapa class="contenedor-mapa" [entrada_mapa]="usuariosele"></app-mapa>
+    </div>
+  </div>
+</div>

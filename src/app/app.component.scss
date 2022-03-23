@@ -1,0 +1,46 @@
+.contenedor-principal{
+    height: 100vh;
+    overflow-y: hidden;
+    background-color: green;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+}
+.contenedor-cabecera{
+    background-color: red;
+    height: 50px;
+    width: 100%;
+}
+.contenedor-medio{
+    height: 100%;
+    display: grid;
+    overflow-y: hidden;
+    grid-template-columns: 300px 1fr 1fr;
+}
+.division-izquierda{
+    height: 100%;
+    display: grid;
+    overflow-y: hidden;
+    grid-template-rows: 50px 1fr 50px;    
+}
+.contenedor-buscador{
+    background-color: orange;
+    height: 50px;
+}
+.contenedor-listado{
+    background-color: violet;
+    height: 100%;
+    overflow-y: auto;
+}
+.contenedor-botonera{
+    background-color: orange;
+    overflow-y: auto;
+    height: 50px;
+}
+.contenedor-datos{
+    background-color: pink;
+    height: 100%;
+}
+.contenedor-mapa{
+    background-color: burlywood;
+    height: 100%;
+}
