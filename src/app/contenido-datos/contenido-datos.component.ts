@@ -7,10 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class ContenidoDatosComponent{
 
-  @Input () usuariodelpadre:any;
+  @Input () usuariodelpadreendatos:any;
 
-  prueba(){
-    console.log(this.usuariodelpadre);
-  }
+  
+
+  
 
 }
