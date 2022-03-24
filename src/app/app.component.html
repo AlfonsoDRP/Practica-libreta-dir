@@ -23,17 +23,25 @@
         </div>
       </div>
       <div class="contenedor-listado">
-        <app-listado [usuariosdelpadreenlistado]="datos"  (usuarioseleccionado)="seleccionausuario($event)"></app-listado>
+        <app-listado
+          [usuariosdelpadreenlistado]="datos"
+          [usuarios_para_mandar]="datos"
+          (usuarioseleccionado_apoyo)="rescatarposicion($event)"
+        ></app-listado>
       </div>
       <div class="contenedor-botonera">
         <app-botonera (salidaboton)="valor_boton($event)"></app-botonera>
       </div>
     </div>
     <div class="contenedor-datos">
-      <app-contenido-datos [usuariodelpadreendatos]="usuariosele"></app-contenido-datos>
+      <app-contenido-datos
+        [usuariodelpadreendatos]="usuariosele"
+        [usuariodelpadreendatos_apoyo]="usuariosele_apoyo"
+      ></app-contenido-datos>
     </div>
     <div class="contenedor-mapa">
-      <app-mapa></app-mapa>
+      {{usuariosele|json}}
+      {{usuariosele_apoyo|json}}
     </div>
   </div>
 </div>

@@ -6,8 +6,9 @@ import { Component, Output,EventEmitter } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'practica-libreta-dir';
   usuariosele:any;
+  usuariosele_apoyo:any;
+  posicion_json:any;
   datos = [ {
     "nombre" : "Alfonso",
     "apellidos" : "De Rojas Perez",
@@ -33,7 +34,7 @@ export class AppComponent {
     "notas": "10"
   },
   {
-    "nombre" : "Alfonso",
+    "nombre" : "Rodrigo",
     "apellidos" : "De Rojas Perez",
     "email": "alfonsodrojasp@gmail.com",
     "telefono": "654588422",
@@ -45,7 +46,7 @@ export class AppComponent {
     "notas": "10"
   },
   {
-    "nombre" : "Alfonso",
+    "nombre" : "Marta",
     "apellidos" : "De Rojas Perez",
     "email": "alfonsodrgmail.com",
     "telefono": "654588422",
@@ -57,7 +58,7 @@ export class AppComponent {
     "notas": "10"
   },
   {
-    "nombre" : "Alfonso",
+    "nombre" : "Pablo",
     "apellidos" : "De Rojas Perez",
     "email": "alfonsodrojasp@gmail.com",
     "telefono": "654588422",
@@ -69,8 +70,10 @@ export class AppComponent {
     "notas": "10"
   },
 ];
-  seleccionausuario(usuario:any){
-    this.usuariosele=usuario;
+  rescatarposicion(index:any){
+    this.posicion_json=index;
+    this.usuariosele=this.datos[this.posicion_json];
+    this.usuariosele_apoyo=Object.assign({},this.datos[this.posicion_json]);
   }
   crear(){
     this.datos.push({
@@ -86,10 +89,11 @@ export class AppComponent {
     "notas": "empty"})
   }
   modificar(){
-    console.log("modificacion en progreso");
+    this.datos[this.posicion_json]=Object.assign({},this.usuariosele_apoyo);
+    this.usuariosele = this.datos[this.posicion_json]
   }
   borrar(){
-    this.datos.splice(this.datos.indexOf(this.usuariosele),1);
+    this.datos.splice(this.posicion_json,1);
   }
   valor_boton(tipo:any){
     switch (tipo){
@@ -106,6 +110,4 @@ export class AppComponent {
         "¿?";
     }
   }
-
-  
 }

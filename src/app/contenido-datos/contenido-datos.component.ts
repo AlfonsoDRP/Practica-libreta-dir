@@ -8,7 +8,9 @@ import { Component, Input } from '@angular/core';
 export class ContenidoDatosComponent{
 
   @Input () usuariodelpadreendatos:any;
+  @Input () usuariodelpadreendatos_apoyo:any;
 
+  
   
 
   
